@@ -1,0 +1,59 @@
+Background\ ColorR=0
+Background\ ColorG=0
+Background\ ColorB=0
+Fixed\ Frame=/odom
+Target\ Frame=<Fixed Frame>
+Axes.Enabled=1
+Axes.Length=1
+Axes.Radius=0.1
+Axes.Reference\ Frame=<Fixed Frame>
+Grid.Alpha=0.5
+Grid.Cell\ Size=1
+Grid.ColorR=0.5
+Grid.ColorG=0.5
+Grid.ColorB=0.5
+Grid.Enabled=1
+Grid.Line\ Style=0
+Grid.Line\ Width=0.03
+Grid.Normal\ Cell\ Count=0
+Grid.OffsetX=0
+Grid.OffsetY=0
+Grid.OffsetZ=0
+Grid.Plane=0
+Grid.Plane\ Cell\ Count=100
+Grid.Reference\ Frame=<Fixed Frame>
+Odometry.Angle\ Tolerance=0.1
+Odometry.ColorR=1
+Odometry.ColorG=0.1
+Odometry.ColorB=0
+Odometry.Enabled=1
+Odometry.Keep=100
+Odometry.Position\ Tolerance=0.1
+Odometry.Topic=/odom
+Path.Alpha=1
+Path.ColorR=0.1
+Path.ColorG=1
+Path.ColorB=0
+Path.Enabled=1
+Path.Topic=/leader_path
+Tool\ 2D\ Nav\ GoalTopic=move_base_simple/goal
+Tool\ 2D\ Pose\ EstimateTopic=initialpose
+Camera\ Type=rviz::FixedOrientationOrthoViewController
+Camera\ Config=5.86275 0.49303 48.9095 0.250841 -0.707107 -8.70565e-08 -9.38307e-08 0.707107
+Property\ Grid\ State=selection=Odometry.Enabled.Odometry.Topic;expanded=.Global Options,Path.Enabled,Odometry.Enabled;scrollpos=0,0;splitterpos=201,403;ispageselected=1
+[Display0]
+Name=Grid
+Package=rviz
+ClassName=rviz::GridDisplay
+[Display1]
+Name=Axes
+Package=rviz
+ClassName=rviz::AxesDisplay
+[Display2]
+Name=Path
+Package=rviz
+ClassName=rviz::PathDisplay
+[Display3]
+Name=Odometry
+Package=rviz
+ClassName=rviz::OdometryDisplay

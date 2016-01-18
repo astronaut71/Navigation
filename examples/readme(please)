@@ -1,0 +1,20 @@
+I suggest you check out and compile the entire follow_the_leader package instead of checking out this subdirectory
+
+	/navigationstack:
+-Before running, please change:
+  -gds.world: line 65 to your correct filepath for gds2.pgm
+  -move_base.xml: all 'rosparam' filepaths need to be similarly corrected
+  -gds_move_base.launch:
+	-filepaths in lines 4,6,9,10. Maybe line 5 if you did not check out the whole follow_the_leader package
+-to run:
+  -roslaunch gds_move_base.launch
+  -in RViz, select '2D Nav Goal' or press 'g'. Hold down left-click on a goal point in the map, and move your mouse
+	to your desired yaw. Then release to set that goal pose
+
+	/my_controller:
+-if you checked out follow_the_leader, it should work out-of-the-box. otherwise amend filepaths in lines 6, 9
+-to run: roslaunch controller_test.launch.
+  -Select points like previously described in RViz. This controller is designed to work with many points 
+	in a sort of 'path'. RViz will draw the path of points you select with your mouse, but the first point will not be shown
+	until the second point has been put down.
+

@@ -1,0 +1,1 @@
+Also if you're running nav_talker_rviz, change the 2D Nav Goal to /move_base_simple/gaol (line 80 in .vcg or on RHS of Rviz window)

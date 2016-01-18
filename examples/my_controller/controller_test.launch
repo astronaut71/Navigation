@@ -1,0 +1,10 @@
+<launch>
+  <param name="/use_sim_time" value="true"/>
+  <node pkg="follow_the_leader" type="controller" name="ctlr">
+	<remap from="leader_pose" to ="move_base_simple/goal"/>
+  </node>
+  <node pkg="stage" type="stageros" name="stageros" args="$(find follow_the_leader)/examples/my_controller/testworld.world" respawn="false" >
+    <param name="base_watchdog_timeout" value="0.2"/>
+  </node>
+  <node name="rviz" pkg="rviz" type="rviz" respawn="true" args="-d $(find follow_the_leader)/examples/my_controller/rv2.vcg" />
+</launch>

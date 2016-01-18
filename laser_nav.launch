@@ -1,0 +1,20 @@
+<launch>
+	<node pkg="hokuyo_node" type="hokuyo_node" name="laser" output="screen" />
+	<node pkg="tf" type="static_transform_publisher" name="wc_link_broadcaster"
+	args="0.60 0.25 0 0 0 0 /base_link /laser 100" />
+
+	<node pkg="follow_the_leader" type="las_nav" name="laser_handler" output="screen"/>
+	<node pkg="follow_the_leader" type="controller" name="ftl_control" output="screen"/>
+	<node pkg="wheelchair_proxy" type="wc_ros" name="wc_node" output="screen" />
+
+	<node name="cam" pkg="uvc_camera" type="camera_node" output="screen">
+		<param name="device" type="string" value="/dev/video0"/>
+		<param name="width" type="int" value="640"/>
+		<param name="height" type="int" value="480"/>
+	</node>
+	<node pkg="rosbag" type="record" name="rosb1" args="image_raw/compressed tf scan" />
+</launch>
+
+<!--
+
+-->

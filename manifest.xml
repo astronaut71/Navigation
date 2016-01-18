@@ -1,0 +1,24 @@
+<package>
+  <description brief="follow_the_leader">
+
+     follow_the_leader
+
+  </description>
+  <author>student</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <depend package="cv_bridge"/>
+  <depend package="opencv2"/>
+  <depend package="sensor_msgs"/>
+  <depend package="image_transport"/>
+  <depend package="std_msgs"/>
+  <depend package="nav_msgs"/>
+  <depend package="tf"/>
+  <!--depend package="ar_pose"/-->
+
+  <depend package="actionlib"/>
+  <depend package="move_base_msgs"/>
+
+</package>
+
+

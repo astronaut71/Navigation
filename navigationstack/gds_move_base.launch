@@ -1,0 +1,11 @@
+<launch>
+  <master auto="start"/>
+  <param name="/use_sim_time" value="true"/>
+  <include file="/home/james/Desktop/navigationstack/move_base.xml"/>
+  <node pkg="map_server" type="map_server" name="mapp" args="$(find follow_the_leader)/map/gds2.yaml"/>
+  <node pkg="stage" type="stageros" name="stageros" args="/home/james/Desktop/navigationstack/gds.world" respawn="false" >
+    <param name="base_watchdog_timeout" value="0.2"/>
+  </node>
+  <include file="/home/james/Desktop/navigationstack/amcl.xml"/>  
+  <node name="rviz" pkg="rviz" type="rviz" respawn="true" args="-d /home/james/Desktop/navigationstack/rv.vcg" />
+</launch>

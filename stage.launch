@@ -1,0 +1,18 @@
+<launch>
+
+	<node name="stage" pkg="stage" type="stageros" args="$(find follow_the_leader)/stage_stuff/sim.world">
+		<param name="base_watchdog_timeout" value="0.2"/>
+		<remap from="cmd_vel" to="drive_rates"/>
+	</node>
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find follow_the_leader)/stage_stuff/rviz_view.vcg"/>
+
+	<node pkg="follow_the_leader" type="controller" name="ftl_control" output="screen"/>
+
+	<!--node pkg="rosbag" type="rosbag" name="rosbag" args="play $(find pcl_playground)/boxrun2.bag"/-->
+</launch>
+
+<!--
+Note: Stage here doesn't do a very good job simulating physical characteristics of the WC (ie. none at all)
+Entering a mass of, say 99 compared to 999 gives the same trajectories
+Still, it's a good way to see if and how well controllers perform
+-->
